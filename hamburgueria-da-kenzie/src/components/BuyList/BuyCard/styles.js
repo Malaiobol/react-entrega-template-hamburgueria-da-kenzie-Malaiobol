@@ -6,9 +6,6 @@ export const StyledBuyCard = styled.li`
   width: 350px;
   height: 80;
 
-  border: solid 2px var(--colorGrey20);
-  border-radius: 5px;
-
   margin-bottom: 10px;
 
   div {
@@ -43,7 +40,7 @@ export const StyledBuyCard = styled.li`
   }
 
   small {
-    color: var(--colorGrey20);
+    color: var(--colorGrey50);
 
     font-weight: 400;
     font-size: 0.75rem;
