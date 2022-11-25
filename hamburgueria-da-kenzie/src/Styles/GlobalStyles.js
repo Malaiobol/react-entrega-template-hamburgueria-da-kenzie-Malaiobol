@@ -27,6 +27,7 @@ export default createGlobalStyle`
         --colorGrey100: #333333;
         --colorGrey50: #828282;
         --colorGrey20: #E0E0E0;
+        --colorGrey4: #bdbdbd;
         --colorGrey0: #F5F5F5;
 
         --colorWhiteFixed: #fff;
@@ -35,5 +36,9 @@ export default createGlobalStyle`
     body{
         width: 100vw;
         height: 100vh;
+    }
+
+    .flex{
+        display:flex
     }
 `;
