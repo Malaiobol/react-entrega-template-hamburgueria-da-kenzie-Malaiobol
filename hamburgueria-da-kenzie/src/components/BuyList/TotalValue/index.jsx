@@ -1,6 +1,6 @@
 import { StyledTotalValue } from "./styles";
 
-export const TotalValue = ({ selectedList }) => {
+export const TotalValue = ({ selectedList, removeAll }) => {
   const valueList = selectedList.map((item) => item.price);
   const totalValue = valueList.reduce(
     (accumulator, index) => accumulator + index,
@@ -19,7 +19,7 @@ export const TotalValue = ({ selectedList }) => {
             })}
           </span>
         </p>
-        <button>Remover Todos</button>
+        <button onClick={removeAll}>Remover Todos</button>
       </div>
     </StyledTotalValue>
   );

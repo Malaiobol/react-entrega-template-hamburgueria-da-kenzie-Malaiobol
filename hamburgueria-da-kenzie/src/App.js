@@ -27,9 +27,6 @@ function App() {
 
   function addNewItem(newItem) {
     setNewItem([...selectedList, newItem]);
-    // const newList = selectedList.filter((item) => item.id === newItem.id);
-    // console.log(newList);
-    // setNewItem(newList);
   }
 
   function removeItem(oldItemId) {

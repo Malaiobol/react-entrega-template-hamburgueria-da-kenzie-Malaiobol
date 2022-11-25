@@ -5,7 +5,7 @@ import { BuyListHeader } from "./BuyHeader";
 import { BuyCard } from "./BuyCard";
 import { StyledBuysList } from "./styles";
 
-export const BuyList = ({ selectedList, removeItem }) => {
+export const BuyList = ({ selectedList, removeItem, removeAll }) => {
   return (
     <StyledBuysList>
       <BuyListHeader />
@@ -14,7 +14,7 @@ export const BuyList = ({ selectedList, removeItem }) => {
           {selectedList.map((item) => (
             <BuyCard item={item} key={item.id} removeItem={removeItem} />
           ))}
-          <TotalValue selectedList={selectedList} />
+          <TotalValue selectedList={selectedList} removeAll={removeAll} />
         </>
       ) : (
         <h3>Você ainda não tem itens no carrinho</h3>
