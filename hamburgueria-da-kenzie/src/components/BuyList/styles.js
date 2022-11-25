@@ -16,4 +16,8 @@ export const StyledBuysList = styled.ul`
   li {
     margin: 10px 5px;
   }
+
+  h3 {
+    padding: 50px;
+  }
 `;
