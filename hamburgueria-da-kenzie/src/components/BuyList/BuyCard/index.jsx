@@ -1,14 +1,14 @@
 import { StyledBuyCard } from "./styles";
 
-export const BuyCard = () => {
+export const BuyCard = ({ menu }) => {
   return (
     <StyledBuyCard>
       <div>
-        <img src="" alt="" />
+        <img src={menu.img} alt="" />
       </div>
       <div className="separator">
-        <h5>Burguer Name</h5>
-        <small>Burguer Class</small>
+        <h5>{menu.name}</h5>
+        <small>{menu.category}</small>
       </div>
       <button>Remover</button>
     </StyledBuyCard>
