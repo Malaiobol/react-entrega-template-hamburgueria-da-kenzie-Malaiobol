@@ -1,3 +1,5 @@
+import React from "react";
+
 import { StyledBuyListHeader } from "./styles";
 
 export const BuyListHeader = () => {

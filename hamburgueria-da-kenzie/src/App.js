@@ -1,8 +1,8 @@
+import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
 import { api } from "./services/api";
-
 import { Header } from "./components/Header";
 import { Historic } from "./components/Historic";
 import { StyledBurguerList } from "./Styles/components/BurguerList/styles";
@@ -12,7 +12,6 @@ import { BuyList } from "./components/BuyList";
 
 function App() {
   const [selectedList, setNewItem] = useState([]);
-
   const [menu, setMenu] = useState([]);
   useEffect(() => {
     async function getBurguerItem() {
@@ -26,11 +25,22 @@ function App() {
     getBurguerItem();
   }, []);
 
-  function addNewItem(item) {
-    setNewItem(item);
-    console.log(selectedList);
+  function addNewItem(newItem) {
+    setNewItem([...selectedList, newItem]);
+    // const newList = selectedList.filter((item) => item.id === newItem.id);
+    // console.log(newList);
+    // setNewItem(newList);
   }
 
+  function removeItem(oldItemId) {
+    const newList = selectedList.filter((item) => item.id !== oldItemId);
+    setNewItem(newList);
+  }
+
+  function removeAll() {
+    const newList = [];
+    setNewItem(newList);
+  }
   return (
     <>
       <Header />
@@ -46,7 +56,11 @@ function App() {
               </BurguerCard>
             ))}
           </StyledBurguerList>
-          <BuyList selectedList={selectedList} />
+          <BuyList
+            selectedList={selectedList}
+            removeItem={removeItem}
+            removeAll={removeAll}
+          />
         </div>
       </>
     </>

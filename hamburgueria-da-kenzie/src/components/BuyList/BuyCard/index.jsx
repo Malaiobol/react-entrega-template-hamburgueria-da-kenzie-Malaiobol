@@ -1,16 +1,17 @@
+import React from "react";
 import { StyledBuyCard } from "./styles";
 
-export const BuyCard = ({ menu }) => {
+export const BuyCard = ({ item, removeItem }) => {
   return (
     <StyledBuyCard>
       <div>
-        <img src={menu.img} alt="" />
+        <img src={item.img} alt="" />
       </div>
       <div className="separator">
-        <h5>{menu.name}</h5>
-        <small>{menu.category}</small>
+        <h5>{item.name}</h5>
+        <small>{item.category}</small>
       </div>
-      <button>Remover</button>
+      <button onClick={() => removeItem(item.id)}>Remover</button>
     </StyledBuyCard>
   );
 };

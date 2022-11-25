@@ -8,7 +8,12 @@ export const BurguerCard = ({ menu, children }) => {
       </div>
       <h4 className="burguerName">{menu.name}</h4>
       <small className="burguerClass">{menu.category}</small>
-      <p className="burguerPrice">R${menu.price}</p>
+      <p className="burguerPrice">
+        {menu.price.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        })}
+      </p>
       {children}
     </StyledBurguerCard>
   );

@@ -1,8 +1,11 @@
 import { StyledTotalValue } from "./styles";
-import { useState } from "react";
 
-export const TotalValue = () => {
-  const [totalValue, setTotal] = useState(0);
+export const TotalValue = ({ selectedList }) => {
+  const valueList = selectedList.map((item) => item.price);
+  const totalValue = valueList.reduce(
+    (accumulator, index) => accumulator + index,
+    0
+  );
 
   return (
     <StyledTotalValue>
