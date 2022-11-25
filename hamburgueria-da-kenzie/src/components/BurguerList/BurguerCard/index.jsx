@@ -2,7 +2,6 @@ import { StyledBurguerCard } from "./styles";
 import { StyledButton } from "../../../Styles/components/Button/style";
 
 export const BurguerCard = (actualItem) => {
-  console.log(actualItem.menu.id);
   return (
     <StyledBurguerCard>
       <div className="backgroundImg">
