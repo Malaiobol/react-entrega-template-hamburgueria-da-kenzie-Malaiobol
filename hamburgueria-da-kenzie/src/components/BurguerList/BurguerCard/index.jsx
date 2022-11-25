@@ -1,16 +1,16 @@
 import { StyledBurguerCard } from "./styles";
 import { StyledButton } from "../../../Styles/components/Button/style";
-import LogoImg from "../BurguerCard/202109200440_8fcy91zr6le 1.png";
 
-export const BurguerCard = () => {
+export const BurguerCard = (actualItem) => {
+  console.log(actualItem.menu.id);
   return (
     <StyledBurguerCard>
       <div className="backgroundImg">
-        <img src={LogoImg} alt="" className="burguerImg" />
+        <img src={actualItem.menu.img} alt="" className="burguerImg" />
       </div>
-      <h4 className="burguerName">Burguer Name</h4>
-      <small className="burguerClass">Burguer Class</small>
-      <p className="burguerPrice">R${}</p>
+      <h4 className="burguerName">{actualItem.menu.name}</h4>
+      <small className="burguerClass">{actualItem.menu.category}</small>
+      <p className="burguerPrice">R${actualItem.menu.price}</p>
       <StyledButton>Adicionar</StyledButton>
     </StyledBurguerCard>
   );

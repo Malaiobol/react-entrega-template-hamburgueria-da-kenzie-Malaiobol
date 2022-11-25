@@ -54,4 +54,9 @@ export const StyledBuyCard = styled.li`
     font-size: 0.75rem;
     line-height: 14px;
   }
+  button:hover {
+    cursor: pointer;
+
+    color: var(--colorGrey50);
+  }
 `;
