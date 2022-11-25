@@ -1,12 +1,16 @@
 import { StyledHeader } from "./styles";
+import { StyledButton } from "../../Styles/components/Button/style";
 import Logo from "./img/logo.png";
-import { StyledButton } from "../../services/components/Button/style";
 
 export const Header = () => {
+  // function searchProduct(){
+
+  // }
+
   return (
     <StyledHeader>
       <div className="logo">
-        <img src={Logo}></img>
+        <img src={Logo} alt=""></img>
       </div>
       <div className="searchDiv">
         <input

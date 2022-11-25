@@ -8,7 +8,7 @@ export const StyledHeader = styled.header`
   gap: 45%;
 
   .logo {
-    margin-top: 1.5%;
+    margin-top: 30px;
     margin-left: 10%;
   }
 
@@ -22,7 +22,7 @@ export const StyledHeader = styled.header`
     width: 100%;
     height: 100%;
 
-    border: solid 2px var(--colorGrey0);
+    border: solid 2px var(--colorGrey20);
     border-radius: 8px;
   }
 

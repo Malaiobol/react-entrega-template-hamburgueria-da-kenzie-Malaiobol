@@ -1,7 +1,15 @@
 import { Header } from "./components/Header";
+import { BurguerList } from "./components/BurguerList";
 
 function App() {
-  return <Header></Header>;
+  return (
+    <>
+      <Header />
+      <>
+        <BurguerList />
+      </>
+    </>
+  );
 }
 
 export default App;
