@@ -19,7 +19,7 @@ export const Header = () => {
           id=""
           placeholder="Pesquise aqui seu produto"
         />
-        <StyledButton>Iniciar</StyledButton>
+        <StyledButton>Pesquisar</StyledButton>
       </div>
     </StyledHeader>
   );

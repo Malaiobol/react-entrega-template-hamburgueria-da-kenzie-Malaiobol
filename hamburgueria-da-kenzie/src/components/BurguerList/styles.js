@@ -7,6 +7,6 @@ export const StyledBurguerList = styled.ul`
   max-width: 940px;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
 `;

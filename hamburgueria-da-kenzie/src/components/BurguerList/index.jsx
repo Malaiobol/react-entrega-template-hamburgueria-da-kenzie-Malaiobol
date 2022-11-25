@@ -5,6 +5,11 @@ export const BurguerList = () => {
   return (
     <StyledBurguerList>
       <BurguerCard />
+      <BurguerCard />
+      <BurguerCard />
+      <BurguerCard />
+      <BurguerCard />
+      <BurguerCard />
     </StyledBurguerList>
   );
 };

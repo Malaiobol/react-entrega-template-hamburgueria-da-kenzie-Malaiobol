@@ -33,6 +33,6 @@ export const StyledHeader = styled.header`
   button {
     position: relative;
     bottom: 50px;
-    left: 75%;
+    left: 68%;
   }
 `;
