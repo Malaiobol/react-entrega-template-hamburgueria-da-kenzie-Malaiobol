@@ -25,13 +25,15 @@ function App() {
   }, []);
 
   function searchByCategory(category) {
-    const newList = menu.filter((item) => item.category === category);
     if (category === "") {
       window.location.reload();
+    } else {
+      const newList = [...menu].filter((item) => item.name.includes(category));
+      setMenu(newList);
+      setSearch(true);
+      setCategory(category);
     }
-    setSearch(true);
-    setMenu(newList);
-    setCategory(category);
+    console.log(menu);
   }
 
   const [actualCategory, setCategory] = useState("");
