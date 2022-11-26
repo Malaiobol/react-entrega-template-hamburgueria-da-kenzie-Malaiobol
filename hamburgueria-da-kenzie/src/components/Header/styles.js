@@ -7,17 +7,15 @@ export const StyledHeader = styled.header`
   height: 80px;
   gap: 45%;
 
-  .logo {
-    margin-top: 30px;
-    margin-left: 10%;
-  }
-
-  .searchDiv {
+  form {
     margin-top: 0.5%;
     width: 365px;
     height: 60px;
   }
-
+  .logo {
+    margin-top: 30px;
+    margin-left: 10%;
+  }
   input {
     width: 100%;
     height: 100%;
@@ -34,5 +32,20 @@ export const StyledHeader = styled.header`
     position: relative;
     bottom: 50px;
     left: 68%;
+
+    color: var(--colorWhiteFixed);
+
+    border: solid 2px var(--colorPrimary);
+    border-radius: 8px;
+
+    background-color: var(--colorPrimary);
+
+    padding: 11px 20px;
+
+    :hover {
+      cursor: pointer;
+      background-color: var(--colorHalfPrimary);
+      border: solid 2px var(--colorHalfPrimary);
+    }
   }
 `;
