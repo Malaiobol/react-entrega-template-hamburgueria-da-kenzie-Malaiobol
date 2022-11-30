@@ -25,11 +25,12 @@ function App() {
   }, []);
 
   function searchByCategory(search) {
+    console.log(search);
     if (search === "") {
       window.location.reload();
     } else {
-      const newList = [...menu].filter(
-        (item) => item.name.includes(search) || item.search.includes(search)
+      const newList = menu.filter(
+        (item) => item.name.includes(search) || item.category.includes(search)
       );
       setMenu(newList);
       setSearch(true);
