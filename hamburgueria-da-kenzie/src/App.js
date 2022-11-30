@@ -1,18 +1,17 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-
 import { api } from "./services/api";
 import { Header } from "./components/Header";
-import { Historic } from "./components/Historic";
+import { TotalValue } from "./components/TotalValue";
 import { StyledBurguerList } from "./Styles/components/BurguerList/styles";
 import { BurguerCard } from "./components/BurguerCard";
 import { StyledButton } from "./Styles/components/Button/style";
 import { BuyList } from "./components/BuyList";
 
 function App() {
-  const [selectedList, setNewItem] = useState([]);
   const [menu, setMenu] = useState([]);
+
   useEffect(() => {
     async function getBurguerItem() {
       try {
@@ -24,6 +23,26 @@ function App() {
     }
     getBurguerItem();
   }, []);
+
+  function searchByCategory(category) {
+    if (category === "") {
+      window.location.reload();
+    } else {
+      const newList = [...menu].filter((item) => item.name.includes(category));
+      setMenu(newList);
+      setSearch(true);
+      setCategory(category);
+    }
+    console.log(menu);
+  }
+
+  const [actualCategory, setCategory] = useState("");
+
+  function clearHistoric() {
+    window.location.reload();
+  }
+
+  const [selectedList, setNewItem] = useState([]);
 
   function addNewItem(newItem) {
     setNewItem([...selectedList, newItem]);
@@ -38,11 +57,19 @@ function App() {
     const newList = [];
     setNewItem(newList);
   }
+
+  const [isSearched, setSearch] = useState(false);
+
   return (
     <>
-      <Header />
+      <Header searchByCategory={searchByCategory} setCategory={setCategory} />
       <>
-        <Historic />
+        {isSearched && (
+          <TotalValue
+            clearHistoric={clearHistoric}
+            actualCategory={actualCategory}
+          />
+        )}
         <div className="flex">
           <StyledBurguerList menu={menu}>
             {menu.map((actualItem) => (

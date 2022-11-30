@@ -15,17 +15,13 @@ export const StyledBuyCard = styled.li`
     background-color: var(--colorGrey0);
   }
 
-  .separator {
-    background-color: transparent;
-  }
-
   div > img {
     margin: 5px;
     max-width: 65px;
     max-height: 65px;
   }
 
-  .separator {
+  span {
     margin-left: 10px;
     width: 50%;
     margin-top: 5%;
