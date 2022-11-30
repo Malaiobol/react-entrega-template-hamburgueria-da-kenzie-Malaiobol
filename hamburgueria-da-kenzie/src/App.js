@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { api } from "./services/api";
 import { Header } from "./components/Header";
-import { TotalValue } from "./components/TotalValue";
+import { SearchHistoric } from "./components/SearchHistoric";
 import { StyledBurguerList } from "./Styles/components/BurguerList/styles";
 import { BurguerCard } from "./components/BurguerCard";
 import { StyledButton } from "./Styles/components/Button/style";
@@ -24,14 +24,16 @@ function App() {
     getBurguerItem();
   }, []);
 
-  function searchByCategory(category) {
-    if (category === "") {
+  function searchByCategory(search) {
+    if (search === "") {
       window.location.reload();
     } else {
-      const newList = [...menu].filter((item) => item.name.includes(category));
+      const newList = [...menu].filter(
+        (item) => item.name.includes(search) || item.search.includes(search)
+      );
       setMenu(newList);
       setSearch(true);
-      setCategory(category);
+      setCategory(search);
     }
     console.log(menu);
   }
@@ -45,7 +47,10 @@ function App() {
   const [selectedList, setNewItem] = useState([]);
 
   function addNewItem(newItem) {
-    setNewItem([...selectedList, newItem]);
+    console.log(newItem.name);
+    if (!selectedList.some((listItem) => listItem.name === newItem.name)) {
+      setNewItem([...selectedList, newItem]);
+    }
   }
 
   function removeItem(oldItemId) {
@@ -65,7 +70,7 @@ function App() {
       <Header searchByCategory={searchByCategory} setCategory={setCategory} />
       <>
         {isSearched && (
-          <TotalValue
+          <SearchHistoric
             clearHistoric={clearHistoric}
             actualCategory={actualCategory}
           />
