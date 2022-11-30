@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledHistoric = styled.div`
+export const StyledTotalValue = styled.div`
   display: flex;
 
   width: 940px;

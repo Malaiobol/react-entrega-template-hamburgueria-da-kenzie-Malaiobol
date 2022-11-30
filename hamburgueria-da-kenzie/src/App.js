@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { api } from "./services/api";
 import { Header } from "./components/Header";
-import { Historic } from "./components/Historic";
+import { TotalValue } from "./components/TotalValue";
 import { StyledBurguerList } from "./Styles/components/BurguerList/styles";
 import { BurguerCard } from "./components/BurguerCard";
 import { StyledButton } from "./Styles/components/Button/style";
@@ -65,7 +65,7 @@ function App() {
       <Header searchByCategory={searchByCategory} setCategory={setCategory} />
       <>
         {isSearched && (
-          <Historic
+          <TotalValue
             clearHistoric={clearHistoric}
             actualCategory={actualCategory}
           />

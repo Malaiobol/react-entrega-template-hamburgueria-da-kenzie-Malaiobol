@@ -12,7 +12,7 @@ export const StyledHeader = styled.header`
     width: 365px;
     height: 60px;
   }
-  .logo {
+  div {
     margin-top: 30px;
     margin-left: 10%;
   }

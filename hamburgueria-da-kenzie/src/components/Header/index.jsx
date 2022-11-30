@@ -14,7 +14,7 @@ export const Header = ({ searchByCategory }) => {
 
   return (
     <StyledHeader>
-      <div className="logo">
+      <div>
         <img src={Logo} alt=""></img>
       </div>
       <form onSubmit={(e) => search(e)}>

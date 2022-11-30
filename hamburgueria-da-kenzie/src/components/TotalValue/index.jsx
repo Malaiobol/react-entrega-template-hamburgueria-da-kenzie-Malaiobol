@@ -1,13 +1,13 @@
-import { StyledHistoric } from "./style";
+import { StyledTotalValue } from "./style";
 import { StyledButton } from "../../Styles/components/Button/style";
 
-export const Historic = ({ clearHistoric, actualCategory }) => {
+export const TotalValue = ({ clearHistoric, actualCategory }) => {
   return (
-    <StyledHistoric>
+    <StyledTotalValue>
       <h2>
         Resultado para:<span>{actualCategory}</span>
       </h2>
       <StyledButton onClick={clearHistoric}>Limpar Busca</StyledButton>
-    </StyledHistoric>
+    </StyledTotalValue>
   );
 };
