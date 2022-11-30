@@ -7,7 +7,7 @@ export const StyledTotalValue = styled.div`
     border-top: solid 2px var(--colorGrey20);
 
     width: 100%;
-    height: 120px;
+    height: 100px;
   }
   p {
     margin-top: 14px;

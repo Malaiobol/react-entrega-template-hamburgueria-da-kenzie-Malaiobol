@@ -6,7 +6,7 @@ export const StyledBuyCard = styled.li`
   width: 350px;
   height: 80;
 
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   div {
     width: 80px;
